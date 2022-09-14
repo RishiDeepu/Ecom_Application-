@@ -1,18 +1,11 @@
 <template>
-  <img alt="logo" class="logoimg" src="./assets/logo2r.png">
-  <sign />
-
+  <router-view />
 </template>
 
 <script>
-import sign from './components/signUp.vue'
 
 export default {
   name: 'App',
-  components: {
-    sign
-
-  }
 }
 </script>
 
@@ -23,6 +16,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
+}
+body{
+  padding: 0;
+  margin: 0;
 }
 </style>

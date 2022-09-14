@@ -1,4 +1,5 @@
 <template>
+    <img alt="logo" class="logoimg" src="../assets/logo2r.png">
     <h3>Signup</h3>
     <div class="form">
         <input type="text" placeholder="UserName" v-model="userName">
@@ -7,6 +8,9 @@
         <input type="phone" placeholder="Phone No" v-model="phnNo">
         <button v-on:click="signUp">Submit</button>
     </div>
+    <p class="already">Already have an account? <router-link class="link" to="/login">Login</router-link>
+    </p>
+
 
 
 </template>
@@ -41,8 +45,8 @@ export default {
                 )
                 console.log("result", reg);
                 if (reg.status == 200) {
-                    alert("sign up okayyyyyyyyyy")
                     localStorage.setItem('user-data', JSON.stringify(reg))
+                    this.$router.push({ name: "Home" })
                 }
                 else {
                     alert("not fount")
@@ -52,6 +56,21 @@ export default {
                 console.log("error", e);
             }
         }
+
+    },
+    async mounted() {
+        let user = await localStorage.getItem('user-data')
+        if (user) {
+            this.$router.push({ name: 'Home' })
+
+        }
+
+        // let user = await axios.get(`http://localhost:1337/findOne?email=${this.email}`)
+        // console.log("user", user);
+        // if (user) {
+        //     this.$router.push({ name: 'Home' })
+
+        // }
 
     }
 

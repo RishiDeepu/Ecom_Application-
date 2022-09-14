@@ -23,3 +23,10 @@
     cursor: pointer;
     
 }
+.already{
+    font-size: smaller;
+    margin-right: 30px;
+}
+.link{
+    color: blue;
+}

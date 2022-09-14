@@ -1,0 +1,21 @@
+.navbar {
+    background-color: pink;
+    overflow: hidden;
+}
+.navbar a{
+    float: right;
+    margin-right: 5px;
+    padding: 14px 16px;
+    color: #330505f2;
+    text-decoration: none;
+    margin-right: 50px;
+}
+.navbar a:hover{
+    background:#ddd ;
+    color: #333;
+}
+.navbar img{
+    width: 40px;
+    float: left;
+    margin-left: 10px;
+}
